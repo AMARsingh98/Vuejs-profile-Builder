@@ -1,0 +1,221 @@
+<html>
+    <head>
+            <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+            <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+            <script src="https://unpkg.com/vue"></script>
+            <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script> 
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>  
+          
+            <script type="text/javascript" src="html2canvas.js"></script>
+            <script type="text/javascript" src="js/jspdf.min.js"></script>
+
+            <link rel="stylesheet" href="style.css">
+            <script src="script.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+                <link rel="stylesheet" href="index.css">
+                <script src="https://unpkg.com/vue" src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+            
+        <nav class="navbar">
+            <div id="logo">
+            <h2><img style="float: left"  src="https://cdn.vox-cdn.com/thumbor/mTlqXTUVIpLQCs11M9M3G3YMaK8=/0x0:870x1024/1200x0/filters:focal(0x0:870x1024):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/6372019/princesymbol.png" alt=""  WIDTH=60 HEIGHT=40 > Event'O' Profile Builder</h2>
+        </div>
+            </nav>
+        <div id="app">    
+                        <!--input form-->
+                       
+        <div class="row-container-fluid">
+                <div  class="col-xs-5"><h1>Enter Details</h1>
+                    
+                    <div class="inputs">
+                        <div class="textarea">
+                    <label for="">Enter name</label>
+                         <input type="text" v-model="name" placeholder="Enter name">
+                         <br>
+                         <br>   
+                         <label for="">Enter email</label>              
+                         <input type="email" v-model="email" placeholder="example@gmil.com">
+                         <br>
+                         <br>
+                         <label for="">Enter age  .</label>
+                         <input type="number"  v-model="age" placeholder="Enter age">
+                         <br>
+                         <br>
+                        </div>
+                         <input class="btn btn-primary" width="auto" type="file" @change="onFileChange"/>
+                         
+
+                         <br>
+                         <br>
+                         <select v-model=Sessions Detailsselected>
+                                <option dSessions Detailssabled value="">select</option>
+                                <option>Front-end Developer</option>
+                                <option>Back-end Developer</option>
+                                <option>Full  -stack Devloper</option>
+                              </select>
+                              <br>
+                              <h3>current status</h3>
+                              <input type="radio" id="one" value="Working for a company" v-model="picked">
+                              <label for="one">Working for a company</label>
+                              <br>
+                              <input type="radio" id="two" value="self employee" v-model="picked">
+                              <label for="two">self employee</label>
+                              <br>
+                              <br>
+                              <h3>Add skills</h3>
+                              <hr>
+                              <div id='example-3'>
+                                    <input type="checkbox" id="1" value="WEB DEVLOPEMENT" v-model="checkedNames">
+                                    <label for="1">WEB DEVLOPEMENT</label>
+
+                                    <input type="checkbox" id="2" value="DATABASE" v-model="checkedNames">
+                                    <label for="2">DATABASE</label>
+
+                                    <input type="checkbox" id="3" value="MACHINE LEARNING" v-model="checkedNames">
+                                    <label for="3">MACHINE LEARNING</label>
+
+                                    <br>
+                                    <input type="checkbox" id="4" value="ARTIFICIAL INTELLIGENCE" v-model="checkedNames">
+                                    <label for="4">ARTIFICIAL INTELLIGENCE</label>
+
+                                    <br>
+                                    <input type="checkbox" id="5" value="LEADERSHIP" v-model="checkedNames">
+                                    <label for="5">LEADERSHIP</label>
+                                    <br>
+                                  </div>
+                                  <div class="inputs">
+                                        <label for="">GIVE YOUR PROJECTS LINK</label>
+                                             <input type="links" v-model="links" placeholder="Ente link">
+                                    </div>
+                                    <div class="inputs">
+                                            <label for="">GIVE YOUR YOUTUBE LINK</label>
+                                                 <input type="YOUTUBE" v-model="YOUTUBE" placeholder="Ente link">
+                                        </div>
+                                        <div class="inputs">
+                                                <label for="">GIVE YOUR INSTAGRAM LINK</label>
+                                                     <input type="INSTAGRAM" v-model="INSTAGRAM" placeholder="Ente link">
+                                            </div>
+                                            <div class="inputs">
+                                                    <label for="">GIVE YOUR LINKED-IN LINK</label>
+                                                         <input type="LINKEDIN" v-model="LINKEDIN" placeholder="Ente link">
+                                                </div>
+                                 
+        
+                                                <form >
+                                                    <label for="">write HTML code to form UI</label>
+                                                         <textarea v-model="htmlCompiler" placeholder="write code" height="50px" width="100px"></textarea>
+                                                        </form>    
+
+                                          
+                   </div>                                                                                                                   
+                </div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+                           <!--output profile-->                                                                    
+
+                <div  class="col-xs-7"><h1>Profile</h1>                                                                       
+                    
+                    
+                    <div id="target">
+                        <div class="avtar"><img alt="profile" width=200px v-bind:src="image" >
+                          <p><h2>.  {{ name }}</h2></p>
+
+                        </div>
+                        <hr>                  
+                 <div class="outputs">
+                                                                                                                                                                                                                                                                           
+                    <br>
+                    <p ><i class="fa fa-envelope fa-2x"></i> EMAIL:- {{ email }}</p>
+                    <br>
+                    <p ><i class="fa fa-heart fa-2x"></i> AGE:- {{ age }}</p>
+                    <br>
+                 <span><i class="fa fa-address-card fa-2x"></i> CATEGORY:- {{ selected }}</span>
+                 <br>
+                 <br>
+              <span><i class="fa fa-briefcase fa-2x"></i> STATUS:- {{ picked }}</span>
+              <br>
+              <br>
+              <span><i class="fa fa-flask fa-2x"></i> SKILLS:- {{ checkedNames.join(', ') }}</span>
+              <br>
+              <br>
+              <br>
+              <div class="icon">
+                  <a v-bind:href="htmlCompiler" title="htmlCode"> <p></i><h4></h4></p></a>
+                </div>
+                <br>
+                <br>
+              <div id="icons">
+                <ul>
+                <div class="icon">      
+                   <li> <a v-bind:href="PROJECTS" title="projects ink"><p><i class="fa fa-link fa-2x"></i></p></a></li>
+                  </div> 
+                  <div class="icon"> 
+                    <li><a v-bind:href="INSTAGRAM" title="instagram"><p><i class="fa fa-instagram fa-2x"></i></p></a></li>
+                  </div> 
+                  <div class="icon">
+                    <li><a v-bind:href="YOUTUBE"title="YOUTUBE"> <p><i class="fa fa-youtube fa-2x"></i></p></a></li>
+                  </div>
+                  <div class="icon">
+                   <li><a v-bind:href="LINKEDIN" title="linked-in"> <p><i class="fa fa-linkedin fa-2x"></i></p></a></li>
+                   </div>
+                  </ul>
+                </div>
+            </div>
+            <br>
+          </div>
+<!-- <button id="clickbind" onclick="onClick()" style="clear:both"><i class="fa fa-download fa-2x"></i> Download PDF</button>-->
+                          <button class="btn btn-primary" onclick="genPDF()" >Download PDF</button>
+
+                </div>
+            <div>
+        </div>
+<script>
+/*
+    function printPdf(){
+  
+  var doc = new jsPDF();
+  
+  
+  doc.fromHTML(document.getElementById('target'), 20, 20, {
+    'width': 500,
+    "elementHndlers":specialElementHandlers
+  });
+  
+  doc.save('Test.pdf');
+}
+
+function onClick() {
+  var pdf = new jsPDF('p', 'pt', 'letter');
+  pdf.canvas.height = 72 * 11;
+  pdf.canvas.width = 72 * 8.5;
+
+  pdf.fromHTML(document.getElementById('target'));
+
+  pdf.save('test.pdf');
+};
+
+var element = document.getElementById("clickbind");
+element.addEventListener("click", onClick);*/
+
+function genPDF() {
+      html2canvas(document.getElementById('target'),{
+        onrendered: function(canvas){
+          var img = canvas.toDataURL("image/png");
+          var doc = new jsPDF();
+          doc.addImage(img, 'JPEG',5,5);
+          doc.save('profile.pdf');
+        }
+      });
+    } 
+
+</script>
+        <script src="index.js"></script>
+
+    </body>
+</html>
